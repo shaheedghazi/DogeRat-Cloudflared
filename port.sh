@@ -11,5 +11,5 @@ echo -e "\e[0m"
 echo "Author: shivayadv"
 echo "Github: shivaya-dav"
 echo "Telegram channel: cybershieldx"
-read -p "Enter your Telegram username: " o3t1w
+read -p "Enter your Telegram username: " username
 cloudflared tunnel --url localhost:8999
