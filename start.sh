@@ -9,16 +9,6 @@ MAGENTA="\033[35m"
 CYAN="\033[36m"
 RESET="\033[0m"
 
-# Print banner
-echo -e "${RED}██████╗░░█████╗░░██████╗░███████╗██████╗░░█████╗░████████╗"
-echo -e "██╔══██╗██╔══██╗██╔════╝░██╔════╝██╔══██╗██╔══██╗╚══██╔══╝"
-echo -e "██║░░██║██║░░██║██║░░██╗░█████╗░░██████╔╝███████║░░░██║░░░"
-echo -e "██║░░██║██║░░██║██║░░╚██╗██╔══╝░░██╔══██╗██╔══██║░░░██║░░░"
-echo -e "██████╔╝╚█████╔╝╚██████╔╝███████╗██║░░██║██║░░██║░░░██║░░░"
-echo -e "╚═════╝░░╚════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░${RESET}"
-echo -e "${YELLOW}               ░D░O░G░E░ ░R░A░T░B░Y░S░ ░H░I░V░ ░A░Y░A░D░A░V░${RESET}"
-
-
 echo -e "\e[0m"
 echo "Author: shivayadv"
 echo "Github: shivaya-dav"
@@ -33,12 +23,11 @@ done
 '
 echo " Done!"
 
-
 apt update && apt upgrade -y
 if ! command -v node &> /dev/null
 then
     echo "Node.js LTS not found. Installing..."
-    pkg install nodejs-lts || { echo "Failed to install Node.js LTS" ; exit 1; }
+    apt install -y nodejs || { echo "Failed to install Node.js LTS" ; exit 1; }
 else
     echo "Node.js LTS already installed"
 fi
